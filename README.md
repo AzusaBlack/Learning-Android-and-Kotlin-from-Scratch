@@ -1,4 +1,5 @@
-<h2> Aprendendo kotlin com o google </h2>
+<h2> Aprendendo kotlin com o google </h2> 
+<p align=”left”> 11 de agosto de 2021 </P>
 
 Este Curso é uma copia do curso do Google. E você pode achar o curso neste link:
 <br>
