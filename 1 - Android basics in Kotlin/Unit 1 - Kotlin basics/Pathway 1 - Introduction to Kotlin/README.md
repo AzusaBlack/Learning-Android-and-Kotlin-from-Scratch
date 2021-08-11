@@ -1,5 +1,5 @@
 <h2> Introdução ao Kotlin </h2>
-<br/>
+<br>
 Aprenda o básico do Kotlin, uma linguagem de programação moderna que permite expressar suas ideias de forma concisa.
 
 ##
@@ -41,9 +41,13 @@ Uma linguagem de programação é usada para dizer a um computador o que fazer.
 Vamos falar mais do Kotlin depois.
 Antes, vamos falar o que é necessário para começar este curso.
 Para começar, você precisará de:
+<br>
 ● um computador.
+<br>
 ● internet para o download do Android Studio.
+<br>
 ● básico de informática
+<br>
 ● básico de matemática
 A matemática ajuda na programação porque envolve a resolução de problemas.
 Você não precisa de experiência com programação.
