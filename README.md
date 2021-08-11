@@ -1,2 +1,1 @@
-# Learning-Android-and-Kotlin-from-Scratch
- Learning Kotlin
+learning kotlin with google
