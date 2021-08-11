@@ -1,6 +1,7 @@
-Android Basics in Kotlin
-Welcome to Android Basics in Kotlin! In this course, you'll learn the basics of building Android apps with the Kotlin programming language. Along the way, you'll develop a collection of apps to start your journey as an Android developer.
+<h2> Android Basics in Kotlin </h2>
 
-NEW: This course will help prepare you for the Associate Android Developer certification exam.
+Bem-vindo ao Android basico em Kotlin! Neste curso, você aprenderá os fundamentos da criação de aplicativos Android com a linguagem de programação Kotlin. Ao longo do caminho, você desenvolverá uma coleção de aplicativos para iniciar sua jornada como desenvolvedor Android.
 
-Units 1 to 5 are available now. Unit 6 is coming soon!
+NOVO: Este curso ajudará a prepará-lo para o exame de certificação Associate Android Developer.
+
+As unidades 1 a 5 já estão disponíveis. A unidade 6 estará disponível em breve!
