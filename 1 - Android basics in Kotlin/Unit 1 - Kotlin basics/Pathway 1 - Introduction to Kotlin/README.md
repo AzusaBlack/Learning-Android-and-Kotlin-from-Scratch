@@ -49,6 +49,7 @@ Para começar, você precisará de:
 ● básico de informática
 <br>
 ● básico de matemática
+<br>
 A matemática ajuda na programação porque envolve a resolução de problemas.
 Você não precisa de experiência com programação.
 Ajuda ter um dispositivo Android, smartphone ou tablet, para testar o app.
@@ -70,4 +71,4 @@ A estimativa realista vai de alguma semanas a meses.
 Não importa o ponto de partida, a jornada será desafiadora, interessante e espero que seja divertida.
 No final, você terá construido uma coleção de apps que será uma amostra do que é possível fazer com o Android.
 
-Seja bem vindo.
+Seja bem vindo!
