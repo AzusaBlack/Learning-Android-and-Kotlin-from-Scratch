@@ -62,7 +62,7 @@ Com um tipo ```String?```, você pode atribuir um valor ```String``` ou ```null`
 
 Você precisa lidar com variáveis anuláveis com cuidado ou corre o risco de ter um ```NullPointerException```. Em Java, por exemplo, se você tentar invocar um método em um valor nulo, seu programa falhará.
 
-O Kotlin fornece uma série de mecanismos para trabalhar com segurança com variáveis anuláveis. Para ver mais informações, consulte Padrões comuns do Kotlin no Android: anulação [(link em inglês).] (https://developer.android.com/kotlin/common-patterns#nullability)
+O Kotlin fornece uma série de mecanismos para trabalhar com segurança com variáveis anuláveis. Para ver mais informações, consulte Padrões comuns do Kotlin no Android: anulação [link em inglês] (https://developer.android.com/kotlin/common-patterns#nullability)
 Traduzirei assim que possível.
 
 <h3> Condicionais </h3>
