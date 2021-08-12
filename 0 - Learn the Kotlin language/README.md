@@ -1,12 +1,12 @@
-Conheça a linguagem de programação Kotlin
+<h2> Conheça a linguagem de programação Kotlin </h2>
 Kotlin é uma linguagem de programação amplamente usada por desenvolvedores Android em qualquer lugar. Este tópico funciona como um curso intensivo do Kotlin para você começar a usá-lo rapidamente.
 
-Declaração de variável
+<h3> Declaração de variável </h3>
 O Kotlin usa duas palavras-chave diferentes para declarar variáveis: val e var.
 
-Use val para uma variável cujo valor nunca muda. Não é possível reatribuir um valor a uma variável que tenha sido declarada usando val.
-Use var para uma variável cujo valor possa ser mudado.
-No exemplo abaixo, count é uma variável do tipo Int que recebe um valor inicial de 10:
+* Use ```val``` para uma variável cujo valor nunca muda. Não é possível reatribuir um valor a uma variável que tenha sido declarada usando ```val```.
+* Use ```var``` para uma variável cujo valor possa ser mudado.
+No exemplo abaixo, ```count``` é uma variável do tipo ```Int``` que recebe um valor inicial de 10:
 
 
 var count: Int = 10
