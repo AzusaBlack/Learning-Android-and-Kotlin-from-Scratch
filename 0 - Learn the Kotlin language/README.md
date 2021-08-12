@@ -10,7 +10,9 @@ O Kotlin usa duas palavras-chave diferentes para declarar variáveis: val e var.
 No exemplo abaixo, ```count``` é uma variável do tipo ```Int``` que recebe um valor inicial de 10:
 
 
-```var count: Int = 10```
+```
+var count: Int = 10
+```
 
 ```Int``` é um tipo que representa um número inteiro, um dos muitos tipos numéricos que podem ser representados em Kotlin. Assim como acontece com outras linguagens, você também pode usar ```Byte```, ```Short```, ```Long```, ```Float``` e ```Double```, dependendo dos seus dados numéricos.
 
@@ -23,41 +25,47 @@ count = 15
 No entanto, alguns valores não podem ser mudados. Considere um ```String``` chamado ```languageName```. Se você quiser garantir que ```languageName``` sempre tenha o valor "Kotlin", poderá declarar ```languageName``` usando a palavra-chave ```val```:
 
 
-```val languageName: String = "Kotlin"```
-Essas palavras-chave permitem que você seja explícito sobre o que pode ser mudado. Use-as em seu favor conforme necessário. Se uma referência de variável precisar ser reatribuível, declare-a como var. Do contrário, use val.
+```
+val languageName: String = "Kotlin"
+```
+Essas palavras-chave permitem que você seja explícito sobre o que pode ser mudado. Use-as em seu favor conforme necessário. Se uma referência de variável precisar ser reatribuível, declare-a como ```var```. Do contrário, use ```val```.
 
-Inferência de tipo
-Continuando com o exemplo anterior, quando você atribui um valor inicial a languageName, o compilador Kotlin pode inferir o tipo com base no tipo do valor atribuído.
+<h3> Inferência de tipo </h3>
+Continuando com o exemplo anterior, quando você atribui um valor inicial a ```languageName```, o compilador Kotlin pode inferir o tipo com base no tipo do valor atribuído.
 
-Como o valor de "Kotlin" é do tipo String, o compilador infere que languageName também é um String. O Kotlin é uma linguagem estática. Isso significa que o tipo é resolvido no momento da compilação e nunca muda.
+Como o valor de ```"Kotlin"``` é do tipo ```String```, o compilador infere que ```languageName``` também é um ```String```. O Kotlin é uma linguagem estática. Isso significa que o tipo é resolvido no momento da compilação e nunca muda.
 
-No exemplo a seguir, languageName é inferido como String. Portanto, não é possível chamar nenhuma função que não faça parte da classe String:
+No exemplo a seguir, ```languageName``` é inferido como ```String```. Portanto, não é possível chamar nenhuma função que não faça parte da classe ```String```:
 
-
+```
 val languageName = "Kotlin"
 val upperCaseName = languageName.toUpperCase()
 
 // Fails to compile
 languageName.inc()
-toUpperCase() é uma função que só pode ser chamada em variáveis do tipo String. Como o compilador Kotlin inferiu languageName como String, você pode chamar toUpperCase() com segurança. inc(), entretanto, é uma função de operador Int, por isso não pode ser chamada em String. A abordagem do Kotlin para a inferência de tipos oferece concisão e segurança de tipos.
+```
+```toUpperCase()``` é uma função que só pode ser chamada em variáveis do tipo ```String```. Como o compilador Kotlin inferiu ```languageName``` como ```String```, você pode chamar ```toUpperCase()``` com segurança. ```inc()```, entretanto, é uma função de operador ```Int```, por isso não pode ser chamada em ```String```. A abordagem do Kotlin para a inferência de tipos oferece concisão e segurança de tipos.
 
-Segurança nula
+<h3> Segurança nula </h3>
 Em algumas linguagens, uma variável de tipo de referência pode ser declarada sem fornecer um valor explícito inicial. Nesses casos, as variáveis geralmente contêm um valor nulo. Por padrão, as variáveis do Kotlin não podem reter valores nulos. Isso significa que o snippet a seguir é inválido.
 
-
+```
 // Fails to compile
 val languageName: String = null
-Para que uma variável mantenha um valor nulo, ela precisa ser do tipo anulável. Você pode especificar uma variável como sendo anulável, usando um sufixo do tipo com ?, conforme mostrado neste exemplo a seguir.
+```
+Para que uma variável mantenha um valor nulo, ela precisa ser do tipo anulável. Você pode especificar uma variável como sendo anulável, usando um sufixo do tipo com ```?```, conforme mostrado neste exemplo a seguir.
 
-
+```
 val languageName: String? = null
-Com um tipo String?, você pode atribuir um valor String ou null a languageName.
+```
+Com um tipo ```String?```, você pode atribuir um valor ```String``` ou ```null``` a ```languageName```.
 
-Você precisa lidar com variáveis anuláveis com cuidado ou corre o risco de ter um NullPointerException. Em Java, por exemplo, se você tentar invocar um método em um valor nulo, seu programa falhará.
+Você precisa lidar com variáveis anuláveis com cuidado ou corre o risco de ter um ```NullPointerException```. Em Java, por exemplo, se você tentar invocar um método em um valor nulo, seu programa falhará.
 
-O Kotlin fornece uma série de mecanismos para trabalhar com segurança com variáveis anuláveis. Para ver mais informações, consulte Padrões comuns do Kotlin no Android: anulação (link em inglês).
+O Kotlin fornece uma série de mecanismos para trabalhar com segurança com variáveis anuláveis. Para ver mais informações, consulte Padrões comuns do Kotlin no Android: anulação [(link em inglês).] (https://developer.android.com/kotlin/common-patterns#nullability)
+Traduzirei assim que possível.
 
-Condicionais
+<h3> Condicionais </h3>
 O Kotlin apresenta vários mecanismos para implementar a lógica condicional. O mais comum deles é uma instrução if-else. Se uma expressão entre parênteses ao lado de uma palavra-chave if for avaliada como true, o código dentro dessa ramificação (ou seja, o código imediatamente seguinte que é encapsulado entre chaves) será executado. Caso contrário, será executado o código dentro da ramificação else.
 
 
