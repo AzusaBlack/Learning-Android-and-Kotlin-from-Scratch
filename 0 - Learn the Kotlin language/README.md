@@ -1,6 +1,7 @@
 <h2> Conheça a linguagem de programação Kotlin </h2>
 Kotlin é uma linguagem de programação amplamente usada por desenvolvedores Android em qualquer lugar. Este tópico funciona como um curso intensivo do Kotlin para você começar a usá-lo rapidamente.
-
+<br>
+<br>
 <h3> Declaração de variável </h3>
 O Kotlin usa duas palavras-chave diferentes para declarar variáveis: val e var.
 
@@ -9,18 +10,20 @@ O Kotlin usa duas palavras-chave diferentes para declarar variáveis: val e var.
 No exemplo abaixo, ```count``` é uma variável do tipo ```Int``` que recebe um valor inicial de 10:
 
 
-var count: Int = 10
-Int é um tipo que representa um número inteiro, um dos muitos tipos numéricos que podem ser representados em Kotlin. Assim como acontece com outras linguagens, você também pode usar Byte, Short, Long, Float e Double, dependendo dos seus dados numéricos.
+```var count: Int = 10```
 
-A palavra-chave var significa que você pode reatribuir valores a count conforme necessário. Por exemplo, você pode mudar o valor de count de 10 para 15:
+```Int``` é um tipo que representa um número inteiro, um dos muitos tipos numéricos que podem ser representados em Kotlin. Assim como acontece com outras linguagens, você também pode usar ```Byte```, ```Short```, ```Long```, ```Float``` e ```Double```, dependendo dos seus dados numéricos.
 
+A palavra-chave ```var``` significa que você pode reatribuir valores a ```count``` conforme necessário. Por exemplo, você pode mudar o valor de ```count``` de ```10``` para ```15```:
 
+```
 var count: Int = 10
 count = 15
-No entanto, alguns valores não podem ser mudados. Considere um String chamado languageName. Se você quiser garantir que languageName sempre tenha o valor "Kotlin", poderá declarar languageName usando a palavra-chave val:
+```
+No entanto, alguns valores não podem ser mudados. Considere um ```String``` chamado ```languageName```. Se você quiser garantir que ```languageName``` sempre tenha o valor "Kotlin", poderá declarar ```languageName``` usando a palavra-chave ```val```:
 
 
-val languageName: String = "Kotlin"
+```val languageName: String = "Kotlin"```
 Essas palavras-chave permitem que você seja explícito sobre o que pode ser mudado. Use-as em seu favor conforme necessário. Se uma referência de variável precisar ser reatribuível, declare-a como var. Do contrário, use val.
 
 Inferência de tipo
