@@ -62,8 +62,8 @@ Com um tipo ```String?```, você pode atribuir um valor ```String``` ou ```null`
 
 Você precisa lidar com variáveis anuláveis com cuidado ou corre o risco de ter um ```NullPointerException```. Em Java, por exemplo, se você tentar invocar um método em um valor nulo, seu programa falhará.
 
-O Kotlin fornece uma série de mecanismos para trabalhar com segurança com variáveis anuláveis. Para ver mais informações, consulte Padrões comuns do Kotlin no Android: anulação (link em inglês.) 
-<br>https://developer.android.com/kotlin/common-patterns#nullability
+O Kotlin fornece uma série de mecanismos para trabalhar com segurança com variáveis anuláveis. Para ver mais informações, consulte Padrões comuns do Kotlin no Android: [anulação](https://developer.android.com/kotlin/common-patterns#nullability)
+<br>Links em inglês
 <br>Traduzirei assim que possível.
 
 <h3> Condicionais </h3>
@@ -126,15 +126,17 @@ if (languageName != null) {
 }
 ```
 Na ramificação condicional, ```languageName``` pode ser tratado como não anulável. O Kotlin é inteligente o suficiente para reconhecer que a condição para executar a ramificação é que ```languageName``` não contenha um valor nulo. Portanto, você não precisa tratar ```languageName``` como anulável nessa ramificação. Essa transmissão inteligente funciona para verificações nulas, [verificações de tipo](https://kotlinlang.org/docs/typecasts.html#is-and-is-operators) ou qualquer condição que satisfaça a um [contrato](https://kotlinlang.org/docs/typecasts.html#is-and-is-operators)
+<br>Links em inglês
+<br>Traduzirei assim que possível.
 
-Funções
+<h3> Funções </h3>
 Você pode agrupar uma ou mais expressões em uma função. Em vez de repetir a mesma série de expressões sempre que precisar de um resultado, você pode unir as expressões em uma função e chamar essa função.
 
-Para declarar uma função, use a palavra-chave fun seguida pelo nome da função. Em seguida, defina os tipos de entrada que sua função assume, se houver, e declare o tipo de saída retornada. No corpo de uma função, você define expressões que são chamadas quando sua função é invocada.
+Para declarar uma função, use a palavra-chave ```fun``` seguida pelo nome da função. Em seguida, defina os tipos de entrada que sua função assume, se houver, e declare o tipo de saída retornada. No corpo de uma função, você define expressões que são chamadas quando sua função é invocada.
 
 Com base nos exemplos anteriores, veja uma função completa do Kotlin:
 
-
+```
 fun generateAnswerString(): String {
     val answerString = if (count == 42) {
         "I have the answer."
@@ -144,13 +146,15 @@ fun generateAnswerString(): String {
 
     return answerString
 }
-A função no exemplo acima tem o nome generateAnswerString. Não é necessária nenhuma entrada. Ela gera um resultado do tipo String. Para chamar uma função, use o nome dela, seguido pelo operador de invocação (()). No exemplo abaixo, a variável answerString é inicializada com o resultado de generateAnswerString().
+```
+A função no exemplo acima tem o nome ```generateAnswerString```. Não é necessária nenhuma entrada. Ela gera um resultado do tipo ```String```. Para chamar uma função, use o nome dela, seguido pelo operador de invocação (```()```). No exemplo abaixo, a variável ```answerString``` é inicializada com o resultado de ```generateAnswerString()```.
 
-
+```
 val answerString = generateAnswerString()
+```
 As funções podem receber argumentos como entrada, conforme mostrado neste exemplo:
 
-
+```
 fun generateAnswerString(countThreshold: Int): String {
     val answerString = if (count > countThreshold) {
         "I have the answer."
@@ -160,16 +164,18 @@ fun generateAnswerString(countThreshold: Int): String {
 
     return answerString
 }
-Ao declarar uma função, você pode especificar qualquer número de argumentos e os tipos. No exemplo acima, generateAnswerString() leva um argumento chamado countThreshold do tipo Int. Dentro da função, você pode se referir ao argumento usando o nome dele.
+```
+Ao declarar uma função, você pode especificar qualquer número de argumentos e os tipos. No exemplo acima, ```generateAnswerString()``` leva um argumento chamado ```countThreshold``` do tipo ```Int```. Dentro da função, você pode se referir ao argumento usando o nome dele.
 
 Ao chamar essa função, você precisa incluir um argumento nos parênteses da chamada da função:
 
-
+```
 val answerString = generateAnswerString(42)
-Como simplificar declarações de função
-generateAnswerString() é uma função bastante simples. A função declara uma variável e, em seguida, retorna imediatamente. Quando o resultado de uma única expressão é retornado de uma função, você pode ignorar a declaração de uma variável local retornando diretamente o resultado da expressão if-else contida na função, conforme mostrado neste exemplo:
+```
+<h3> Como simplificar declarações de função </h3>
+```generateAnswerString()``` é uma função bastante simples. A função declara uma variável e, em seguida, retorna imediatamente. Quando o resultado de uma única expressão é retornado de uma função, você pode ignorar a declaração de uma variável local retornando diretamente o resultado da expressão ```if-else``` contida na função, conforme mostrado neste exemplo:
 
-
+```
 fun generateAnswerString(countThreshold: Int): String {
     return if (count > countThreshold) {
         "I have the answer."
@@ -177,86 +183,99 @@ fun generateAnswerString(countThreshold: Int): String {
         "The answer eludes me."
     }
 }
+```
 Você também pode substituir a palavra-chave de retorno pelo operador de atribuição:
 
-
+```
 fun generateAnswerString(countThreshold: Int): String = if (count > countThreshold) {
         "I have the answer"
     } else {
         "The answer eludes me"
     }
-Funções anônimas
+```
+<h3> Funções anônimas </h3>
 Nem todas as funções precisam de um nome. Algumas funções são identificadas mais diretamente por suas entradas e saídas. Essas funções são chamadas de funções anônimas. Você pode manter uma referência a uma função anônima usando essa referência para chamar a função anônima posteriormente. Você também pode passar a referência no seu app, como acontece com outros tipos de referência.
 
-
+```
 val stringLengthFunc: (String) -> Int = { input ->
     input.length
 }
+```
 Assim como as funções nomeadas, as funções anônimas podem conter qualquer número de expressões. O valor retornado da função é o resultado da expressão final.
 
-No exemplo acima, stringLengthFunc contém uma referência a uma função anônima que usa um String como entrada e retorna o comprimento da entrada String como saída do tipo Int. Por esse motivo, o tipo da função é denotado como (String) -> Int. No entanto, esse código não invoca a função. Para recuperar o resultado da função, você precisa invocá-lo como faria com uma função nomeada. Forneça um String ao chamar stringLengthFunc, conforme mostrado neste exemplo:
+No exemplo acima, ```stringLengthFunc``` contém uma referência a uma função anônima que usa um ```String``` como entrada e retorna o comprimento da entrada ```String``` como saída do tipo ```Int```. Por esse motivo, o tipo da função é denotado como ```(String) -> Int```. No entanto, esse código não invoca a função. Para recuperar o resultado da função, você precisa invocá-lo como faria com uma função nomeada. Forneça um ```String``` ao chamar ```stringLengthFunc```, conforme mostrado neste exemplo:
 
-
+```
 val stringLengthFunc: (String) -> Int = { input ->
     input.length
 }
 
 val stringLength: Int = stringLengthFunc("Android")
-Funções de ordem superior
+```
+<h3>Funções de ordem superior</h3>
 Uma função pode usar outra função como um argumento. As funções que usam outras funções como argumentos são chamadas de funções de ordem superior. Esse padrão é útil para a comunicação entre componentes, da mesma forma que você pode usar uma interface de callback em Java.
 
 Veja um exemplo de uma função de ordem superior:
 
-
+```
 fun stringMapper(str: String, mapper: (String) -> Int): Int {
     // Invoke function
     return mapper(str)
 }
-A função stringMapper() usa um String junto com uma função que deriva um valor Int de um String transmitido nela.
+```
+A função ```stringMapper()``` usa um ```String``` junto com uma função que deriva um valor ```Int``` de um ```String``` transmitido nela.
 
-Você pode chamar stringMapper() passando um String e uma função que satisfaça o outro parâmetro de entrada, ou seja, uma função que usa um String como entrada e gera um Int, conforme mostrado neste exemplo:
+Você pode chamar ```stringMapper()``` passando um ```String``` e uma função que satisfaça o outro parâmetro de entrada, ou seja, uma função que usa um ```String``` como entrada e gera um ```Int```, conforme mostrado neste exemplo:
 
-
+```
 stringMapper("Android", { input ->
     input.length
 })
+```
 Se a função anônima for o último parâmetro definido em uma função, você poderá transmiti-la para fora dos parênteses usados para chamar a função, conforme mostrado neste exemplo:
 
-
+```
 stringMapper("Android") { input ->
     input.length
 }
-As funções anônimas podem ser encontradas em toda a biblioteca padrão do Kotlin. Para mais informações, consulte Funções de ordem superior e lambdas (link em inglês).
+```
+As funções anônimas podem ser encontradas em toda a biblioteca padrão do Kotlin. Para mais informações, consulte [Funções de ordem superior e lambdas](https://kotlinlang.org/docs/lambdas.html)
+<br>Links em inglês
+<br>Traduzirei assim que possível.
 
-Classes
-Todos os tipos mencionados até agora estão integrados à linguagem de programação Kotlin. Se quiser adicionar um tipo personalizado, você poderá definir uma classe usando a palavra-chave class, conforme mostrado neste exemplo:
+<h3> Classes </h3>
+Todos os tipos mencionados até agora estão integrados à linguagem de programação Kotlin. Se quiser adicionar um tipo personalizado, você poderá definir uma classe usando a palavra-chave ```class```, conforme mostrado neste exemplo:
 
-
+```
 class Car
-Propriedades
-As classes representam o estado usando propriedades. Uma propriedade é uma variável de nível de classe que pode incluir um getter, um setter e um campo de backup. Como um carro precisa de rodas para dirigir, você pode adicionar uma lista de objetos Wheel como uma propriedade de Car, conforme mostrado neste exemplo:
+```
+<h3> Propriedades </h3>
+As classes representam o estado usando propriedades. Uma [propriedade](https://kotlinlang.org/docs/properties.html) é uma variável de nível de classe que pode incluir um getter, um setter e um campo de backup. Como um carro precisa de rodas para dirigir, você pode adicionar uma lista de objetos ```Wheel``` como uma propriedade de ```Car```, conforme mostrado neste exemplo:
 
-
+```
 class Car {
     val wheels = listOf<Wheel>()
 }
-Observe que wheels é um public val, o que significa que wheels pode ser acessado de fora da classe Car e não pode ser reatribuído. Se você quiser ter uma instância de Car, primeiro é necessário chamar seu construtor. A partir daí, você pode acessar qualquer uma das propriedades acessíveis.
+```
+Observe que ```wheels``` é um ```public val```, o que significa que ```wheels``` pode ser acessado de fora da classe ```Car``` e não pode ser reatribuído. Se você quiser ter uma instância de ```Car```, primeiro é necessário chamar seu construtor. A partir daí, você pode acessar qualquer uma das propriedades acessíveis.
 
-
+```
 val car = Car() // construct a Car
 val wheels = car.wheels // retrieve the wheels value from the Car
+```
 Se você quiser personalizar suas rodas, poderá definir um construtor personalizado que especifica como as propriedades de classe são inicializadas:
 
-
+```
 class Car(val wheels: List<Wheel>)
-No exemplo acima, o construtor de classe usa um List<Wheel> como argumento do construtor e usa esse argumento para inicializar a propriedade wheels.
+```
+No exemplo acima, o construtor de classe usa um ```List<Wheel>``` como argumento do construtor e usa esse argumento para inicializar a propriedade ```wheels```.
 
-Funções de classe e encapsulamento
+<h3> Funções de classe e encapsulamento </h3>
 As classes usam funções para modelar o comportamento. As funções podem modificar o estado, ajudando você a expor somente os dados que quer expor. Esse controle de acesso faz parte de um conceito maior orientado a objetos, conhecido como encapsulamento.
 
-No exemplo a seguir, a propriedade doorLock é mantida privada em qualquer item fora da classe Car. Para desbloquear o carro, você precisa chamar a função unlockDoor() transmitindo uma chave válida, conforme mostrado neste exemplo:
+No exemplo a seguir, a propriedade ```doorLock``` é mantida privada em qualquer item fora da classe ```Car```. Para desbloquear o carro, você precisa chamar a função ```unlockDoor()``` transmitindo uma chave válida, conforme mostrado neste exemplo:
 
-
+```
 class Car(val wheels: List<Wheel>) {
 
     private val doorLock: DoorLock = ...
@@ -265,9 +284,10 @@ class Car(val wheels: List<Wheel>) {
         // Return true if key is valid for door lock, false otherwise
     }
 }
-Se quiser personalizar a forma como uma propriedade é referenciada, você poderá fornecer getter e setter personalizados. Por exemplo, se quiser expor o getter de uma propriedade ao restringir o acesso a setter, você poderá designar esse setter como private:
+```
+Se quiser personalizar a forma como uma propriedade é referenciada, você poderá fornecer getter e setter personalizados. Por exemplo, se quiser expor o getter de uma propriedade ao restringir o acesso a setter, você poderá designar esse setter como ```private```:
 
-
+```
 class Car(val wheels: List<Wheel>) {
 
     private val doorLock: DoorLock = ...
@@ -279,10 +299,13 @@ class Car(val wheels: List<Wheel>) {
         // Return true if key is valid for door lock, false otherwise
     }
 }
+```
 Com uma combinação de propriedades e funções, você pode criar classes que modelam todos os tipos de objeto.
 
-Interoperabilidade
+<h3> Interoperabilidade </h3>
 Uma das características mais importantes do Kotlin é a interoperabilidade fluida com Java. Como o código Kotlin é compilado até o bytecode da JVM, seu código Kotlin pode ser chamado diretamente no código Java e vice versa. Isso significa que você pode aproveitar bibliotecas Java já existentes diretamente do Kotlin. Além disso, a maioria das APIs do Android é gravada em Java, e você pode chamá-las diretamente do Kotlin.
 
-A seguir
-Kotlin é uma linguagem flexível e pragmática com compatibilidade e dinâmica crescentes. Encorajamos você a testá-la se ainda não tiver feito isso. Para as próximas etapas, confira a documentação oficial do Kotlin (link em inglês) com o guia sobre como aplicar padrões comuns do Kotlin nos seus apps para Android.
+<h3> A seguir </h3>
+Kotlin é uma linguagem flexível e pragmática com compatibilidade e dinâmica crescentes. Encorajamos você a testá-la se ainda não tiver feito isso. Para as próximas etapas, confira a [documentação oficial do Kotlin](https://kotlinlang.org) com o guia sobre como aplicar [padrões comuns do Kotlin](https://github.com/AzusaBlack/Learning-Android-and-Kotlin-from-Scratch/tree/main/2%20-%20Use%20common%20Kotlin%20patterns%20with%20Android) nos seus apps para Android.
+<br>Links em inglês
+<br>Traduzirei assim que possível.
