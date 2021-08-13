@@ -125,7 +125,7 @@ if (languageName != null) {
     println(languageName.toUpperCase())
 }
 ```
-Na ramificação condicional, ```languageName``` pode ser tratado como não anulável. O Kotlin é inteligente o suficiente para reconhecer que a condição para executar a ramificação é que ```languageName``` não contenha um valor nulo. Portanto, você não precisa tratar ```languageName``` como anulável nessa ramificação. Essa transmissão inteligente funciona para verificações nulas, [verificações de tipo] (https://kotlinlang.org/docs/typecasts.html#is-and-is-operators) ou qualquer condição que satisfaça a um [contrato] (https://kotlinlang.org/docs/typecasts.html#is-and-is-operators)
+Na ramificação condicional, ```languageName``` pode ser tratado como não anulável. O Kotlin é inteligente o suficiente para reconhecer que a condição para executar a ramificação é que ```languageName``` não contenha um valor nulo. Portanto, você não precisa tratar ```languageName``` como anulável nessa ramificação. Essa transmissão inteligente funciona para verificações nulas, [verificações de tipo](https://kotlinlang.org/docs/typecasts.html#is-and-is-operators) ou qualquer condição que satisfaça a um [contrato](https://kotlinlang.org/docs/typecasts.html#is-and-is-operators)
 
 Funções
 Você pode agrupar uma ou mais expressões em uma função. Em vez de repetir a mesma série de expressões sempre que precisar de um resultado, você pode unir as expressões em uma função e chamar essa função.
