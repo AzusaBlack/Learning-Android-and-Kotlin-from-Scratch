@@ -62,21 +62,23 @@ Com um tipo ```String?```, você pode atribuir um valor ```String``` ou ```null`
 
 Você precisa lidar com variáveis anuláveis com cuidado ou corre o risco de ter um ```NullPointerException```. Em Java, por exemplo, se você tentar invocar um método em um valor nulo, seu programa falhará.
 
-O Kotlin fornece uma série de mecanismos para trabalhar com segurança com variáveis anuláveis. Para ver mais informações, consulte Padrões comuns do Kotlin no Android: anulação [link em inglês] (https://developer.android.com/kotlin/common-patterns#nullability)
-Traduzirei assim que possível.
+O Kotlin fornece uma série de mecanismos para trabalhar com segurança com variáveis anuláveis. Para ver mais informações, consulte Padrões comuns do Kotlin no Android: anulação (link em inglês.) 
+<br>https://developer.android.com/kotlin/common-patterns#nullability
+<br>Traduzirei assim que possível.
 
 <h3> Condicionais </h3>
-O Kotlin apresenta vários mecanismos para implementar a lógica condicional. O mais comum deles é uma instrução if-else. Se uma expressão entre parênteses ao lado de uma palavra-chave if for avaliada como true, o código dentro dessa ramificação (ou seja, o código imediatamente seguinte que é encapsulado entre chaves) será executado. Caso contrário, será executado o código dentro da ramificação else.
+O Kotlin apresenta vários mecanismos para implementar a lógica condicional. O mais comum deles é uma instrução ```if-else```. Se uma expressão entre parênteses ao lado de uma palavra-chave ```if``` for avaliada como ```true```, o código dentro dessa ramificação (ou seja, o código imediatamente seguinte que é encapsulado entre chaves) será executado. Caso contrário, será executado o código dentro da ramificação ```else```.
 
-
+```
 if (count == 42) {
     println("I have the answer.")
 } else {
     println("The answer eludes me.")
 }
-Você pode representar várias condições usando else if. Isso permite representar uma lógica mais granular e complexa em uma única instrução condicional, conforme mostrado neste exemplo:
+```
+Você pode representar várias condições usando ```else if```. Isso permite representar uma lógica mais granular e complexa em uma única instrução condicional, conforme mostrado neste exemplo:
 
-
+```
 if (count == 42) {
     println("I have the answer.")
 } else if (count > 35) {
@@ -84,9 +86,10 @@ if (count == 42) {
 } else {
     println("The answer eludes me.")
 }
-As instruções condicionais são úteis para representar a lógica com estado, mas você pode se repetir ao gravá-las. No exemplo acima, você simplesmente imprime um String em cada ramificação. Para evitar essa repetição, o Kotlin oferece expressões condicionais. O último exemplo pode ser regravado da seguinte forma:
+```
+As instruções condicionais são úteis para representar a lógica com estado, mas você pode se repetir ao gravá-las. No exemplo acima, você simplesmente imprime um ```String``` em cada ramificação. Para evitar essa repetição, o Kotlin oferece expressões condicionais. O último exemplo pode ser regravado da seguinte forma:
 
-
+```
 val answerString: String = if (count == 42) {
     "I have the answer."
 } else if (count > 35) {
@@ -96,12 +99,13 @@ val answerString: String = if (count == 42) {
 }
 
 println(answerString)
-Implicitamente, cada ramificação condicional retorna o resultado da expressão na linha final, de modo que não é necessário usar uma palavra-chave return. Como o resultado das três ramificações é do tipo String, o resultado da expressão if-else também é do tipo String. Neste exemplo, answerString recebe um valor inicial do resultado da expressão if-else. A inferência de tipos pode ser usada para omitir a declaração de tipo explícito para answerString, mas geralmente é uma boa ideia incluí-la para fins de clareza.
+```
+Implicitamente, cada ramificação condicional retorna o resultado da expressão na linha final, de modo que não é necessário usar uma palavra-chave ```return```. Como o resultado das três ramificações é do tipo ```String```, o resultado da expressão ```if-else``` também é do tipo ```String```. Neste exemplo, ```answerString``` recebe um valor inicial do resultado da expressão ```if-else```. A inferência de tipos pode ser usada para omitir a declaração de tipo explícito para ```answerString```, mas geralmente é uma boa ideia incluí-la para fins de clareza.
 
-Observação: o Kotlin não inclui um operador ternário tradicional, favorecendo o uso de expressões condicionais.
-Conforme a complexidade da instrução condicional aumenta, é recomendável substituir a expressão if-else por uma expressão when, conforme mostrado neste exemplo:
+* Observação: o Kotlin não inclui um operador ternário tradicional, favorecendo o uso de expressões condicionais.
+<br> Conforme a complexidade da instrução condicional aumenta, é recomendável substituir a expressão ```if-else``` por uma expressão ```when```, conforme mostrado neste exemplo:
 
-
+```
 val answerString = when {
     count == 42 -> "I have the answer."
     count > 35 -> "The answer is close."
@@ -109,7 +113,8 @@ val answerString = when {
 }
 
 println(answerString)
-Cada ramificação em uma expressão when é representada por uma condição, uma seta (->) e um resultado. Se a condição no lado esquerdo da seta for avaliada como verdadeira, o resultado da expressão no lado direito será retornado. Observe que a execução não passa de uma ramificação para a próxima. O código no exemplo de expressão when é funcionalmente equivalente ao do exemplo anterior, mas é mais fácil de ler.
+```
+Cada ramificação em uma expressão ```when``` é representada por uma condição, uma seta (```->```) e um resultado. Se a condição no lado esquerdo da seta for avaliada como verdadeira, o resultado da expressão no lado direito será retornado. Observe que a execução não passa de uma ramificação para a próxima. O código no exemplo de expressão ```when``` é funcionalmente equivalente ao do exemplo anterior, mas é mais fácil de ler.
 
 As condicionais do Kotlin destacam um dos recursos mais avançados, a transmissão inteligente. Em vez de usar o operador de chamada segura ou o operador de declaração não nulo para trabalhar com valores anuláveis, você pode verificar se uma variável contém uma referência a um valor nulo usando uma instrução condicional, conforme mostrado neste exemplo:
 
