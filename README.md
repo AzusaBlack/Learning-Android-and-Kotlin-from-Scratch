@@ -15,3 +15,10 @@ Repositorio criado para esutudo pessoal e para ajudar a todos que:
 <br>
 ● Precisa de uma forcinha ou motivação para estudar.
 <br>
+Material concluido até o momento
+<br>
+[x] 0 - Learn the Kotlin language
+[] 1 - Android basics in Kotlin
+[] 2 - Use common Kotlin patterns with Android
+[] 3 - Kotlin style guide
+[] 4 - Additional resources
