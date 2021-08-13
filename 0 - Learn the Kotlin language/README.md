@@ -63,7 +63,7 @@ Com um tipo ```String?```, você pode atribuir um valor ```String``` ou ```null`
 Você precisa lidar com variáveis anuláveis com cuidado ou corre o risco de ter um ```NullPointerException```. Em Java, por exemplo, se você tentar invocar um método em um valor nulo, seu programa falhará.
 
 O Kotlin fornece uma série de mecanismos para trabalhar com segurança com variáveis anuláveis. Para ver mais informações, consulte Padrões comuns do Kotlin no Android: [anulação](https://developer.android.com/kotlin/common-patterns#nullability)
-<br>Links em inglês
+<br>Link em inglês
 <br>Traduzirei assim que possível.
 
 <h3> Condicionais </h3>
@@ -240,7 +240,7 @@ stringMapper("Android") { input ->
 }
 ```
 As funções anônimas podem ser encontradas em toda a biblioteca padrão do Kotlin. Para mais informações, consulte [Funções de ordem superior e lambdas](https://kotlinlang.org/docs/lambdas.html)
-<br>Links em inglês
+<br>Link em inglês
 <br>Traduzirei assim que possível.
 
 <h3> Classes </h3>
@@ -251,6 +251,8 @@ class Car
 ```
 <h3> Propriedades </h3>
 As classes representam o estado usando propriedades. Uma [propriedade](https://kotlinlang.org/docs/properties.html) é uma variável de nível de classe que pode incluir um getter, um setter e um campo de backup. Como um carro precisa de rodas para dirigir, você pode adicionar uma lista de objetos ```Wheel``` como uma propriedade de ```Car```, conforme mostrado neste exemplo:
+<br>Link em inglês
+<br>Traduzirei assim que possível.
 
 ```
 class Car {
@@ -306,6 +308,6 @@ Com uma combinação de propriedades e funções, você pode criar classes que m
 Uma das características mais importantes do Kotlin é a interoperabilidade fluida com Java. Como o código Kotlin é compilado até o bytecode da JVM, seu código Kotlin pode ser chamado diretamente no código Java e vice versa. Isso significa que você pode aproveitar bibliotecas Java já existentes diretamente do Kotlin. Além disso, a maioria das APIs do Android é gravada em Java, e você pode chamá-las diretamente do Kotlin.
 
 <h3> A seguir </h3>
-Kotlin é uma linguagem flexível e pragmática com compatibilidade e dinâmica crescentes. Encorajamos você a testá-la se ainda não tiver feito isso. Para as próximas etapas, confira a [documentação oficial do Kotlin](https://kotlinlang.org) com o guia sobre como aplicar [padrões comuns do Kotlin](https://github.com/AzusaBlack/Learning-Android-and-Kotlin-from-Scratch/tree/main/2%20-%20Use%20common%20Kotlin%20patterns%20with%20Android) nos seus apps para Android.
+Kotlin é uma linguagem flexível e pragmática com compatibilidade e dinâmica crescentes. Encorajamos você a testá-la se ainda não tiver feito isso. Para as próximas etapas, confira a [documentação oficial do Kotlin](https://kotlinlang.org) com o guia sobre como aplicar <a href="https://github.com/AzusaBlack/Learning-Android-and-Kotlin-from-Scratch/tree/main/2%20-%20Use%20common%20Kotlin%20patterns%20with%20Android">padrões comuns do Kotlin</a> nos seus apps para Android.
 <br>Links em inglês
 <br>Traduzirei assim que possível.
