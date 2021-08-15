@@ -42,5 +42,5 @@ Vamos ver se você tem tudo o que precisa para começar:
 * 8 GB RAM ou mais
 * 8 GB de espaço em HD para (<a href="https://developer.android.com/studio">Android Studio</a> + Android SDK + Android Emulator)
 * 1280 x 800 de resolução de tela minimo
-<br> Para ver o app funcionando, ajuda ter um dispositivo Andoird e um cabo USB para conexão com o computador, mas não é obrigatótio.
+<br> Para ver o app funcionando, ajuda ter um dispositivo Android e um cabo USB para conexão com o computador, mas não é obrigatótio.
 Vamos começar!
