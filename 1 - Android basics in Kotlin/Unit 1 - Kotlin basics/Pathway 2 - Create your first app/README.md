@@ -35,14 +35,14 @@ Todas essas informações podem sobrecarregar você, então vá devagar.
 Leva tempo para aprender e absorver o material.
 Você ficará mas confiante a cada app criado.
 Vamos ver se você tem tudo o que precisa para começar:
-● Você precisa de um computador com internet para instalar o Android Studio.
+* Você precisa de um computador com internet para instalar o Android Studio.
 <br> O computador deve atender aos requisitos abaixo:
-● Windows® 8/10 64-bit
-● MacOS® 10.14 (Mojave) ou superior
-● Qualquer 64-bit Linux distribuição que suporte Gnome, KDE, ou Unity DE; GNU C Library (glibc) 2.31 ou superior.
-● x86_64 CPU arquitetura; 2nd geração Intel Core ou mais novo, ou AMD CPU com suporte a Windows Hypervisor
-● 8 GB RAM ou mais
-● 8 GB de espaço em HD para (IDE + Android SDK + Android Emulator)
-● 1280 x 800 de resolução de tela minimo
+* Windows® 8/10 64-bit
+* MacOS® 10.14 (Mojave) ou superior
+* Qualquer 64-bit Linux distribuição que suporte Gnome, KDE, ou Unity DE; GNU C Library (glibc) 2.31 ou superior.
+* x86_64 CPU arquitetura; 2nd geração Intel Core ou mais novo, ou AMD CPU com suporte a Windows Hypervisor
+* 8 GB RAM ou mais
+* 8 GB de espaço em HD para (IDE + Android SDK + Android Emulator)
+* 1280 x 800 de resolução de tela minimo
 <br> Para ver o app funcionando, ajuda ter um dispositivo Andoird e um cabo USB para conexão com o computador, mas não é obrigatótio.
 Vamos começar!
