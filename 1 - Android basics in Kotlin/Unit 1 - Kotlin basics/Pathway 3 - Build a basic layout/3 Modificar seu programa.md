@@ -5,6 +5,7 @@ Vamos mudar o programa para que ele faça algo um pouco diferente.
 1. Mude o texto ```"Hello, world!"``` para ```"Happy Birthday!```".
 2. Para executar o programa, clique no botão de execução azul ou verde no canto superior direito.
 3. Na parte inferior, você verá o código ```Happy Birthday!``` exibido, conforme mostrado abaixo.
+
 ```
 Happy Birthday!
 ```

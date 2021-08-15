@@ -12,11 +12,15 @@ Aprender a criar um app e aprender as noções básicas de programação ao mesm
 Os editores de código são ferramentas que ajudam você a escrever código, da mesma forma que um processador de texto (como o Documentos Google) ajuda na criação de documentos de texto. Neste codelab, você usará um editor de Kotlin interativo no seu navegador. Isso significa que não é necessário instalar softwares para dar o primeiro passo no desenvolvimento de apps.
 <br>
 <h3>Pré-requisitos</h3>
+
 * Usar sites interativos no navegador da Web.
 <h3>O que você aprenderá</h3>
+
 * Como criar, mudar, entender e executar um programa Kotlin minimalista que exibe uma mensagem.
 <h3>O que você criará</h3>
+
 * Um programa na linguagem de programação Kotlin que exibe uma mensagem quando você o executa.
 <h3>O que é necessário</h3>
+
 * Um computador com um navegador da Web moderno, como a versão mais recente do (<a href="https://www.google.com/chrome/">Chrome</a>.
 * Acesso à Internet no computador.

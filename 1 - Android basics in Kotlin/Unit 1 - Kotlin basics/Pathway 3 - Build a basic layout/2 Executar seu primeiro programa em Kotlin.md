@@ -4,7 +4,8 @@ Nesta tarefa, você usará um editor em um site para iniciar a programação na 
 <h3>Usar um editor de código interativo</h3>
 Em vez de instalar um software no seu computador, você pode usar uma ferramenta baseada na Web para criar seu primeiro programa.
 <br>
-1. No navegador, acesse <a href="https://developer.android.com/training/kotlinplayground">Playground Kotlin</a>>. Isso abre uma ferramenta de programação baseada em navegador.
+
+1. No navegador, acesse <a href="https://developer.android.com/training/kotlinplayground">Playground Kotlin</a>. Isso abre uma ferramenta de programação baseada em navegador.
 2. Será exibida uma página com um editor de código no meio.
 Este é o código do programa no editor:
 
@@ -18,6 +19,7 @@ Executar um programa criado por você não é muito diferente de executar qualqu
 <br>
 Vamos ver o que esse programa faz.
 <br>
+
 1. No canto superior direito do editor, localize o triângulo (play) branco ou verde e clique nele para executar o programa.
 2. Olhe para o painel na parte inferior.
 ```
